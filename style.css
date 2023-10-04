@@ -1,0 +1,490 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #000;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    padding: 20px 20px 0;
+    width: 100%;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.hamburgerMenu.mobile {
+    width: 20px;
+    height: 20px;
+    background: url(menuIcon.svg) no-repeat;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.logo {
+    z-index: 10;
+}
+
+.menuAndProfile {
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 60px; */
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+}
+
+main {
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 24px;
+    ;
+    text-transform: capitalize;
+}
+
+.searchBar {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto auto auto;
+    margin: 20px auto 35px;
+}
+
+div#userName {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    text-align: right;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.menuList ul {
+    display: list-item;
+    margin: 150px auto 0;
+    text-align: center;
+    padding:0;
+    list-style: none;
+}
+
+
+.menuList ul li {
+    margin: 45px;
+    font-size: 25px;
+}
+
+.menuList ul li a.active {
+    color: #509E2F
+}
+
+img.profilePic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 10px 0 0px;
+}
+
+span.welcomeText {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.searchBar h4 {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 5px;
+}
+
+section#banner {
+    position: relative;
+}
+
+.searchBar input {
+    background: #ADADAD;
+    color: #f3f3f3;
+    border: none;
+    grid-column: 1/ span 2;
+    font-size: 16px;
+    text-indent: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button {
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.searchBar input:focus {
+    outline: none;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto 0 0;
+    gap: 7px;
+}
+
+.sortBtn,
+#searchBtn {
+    background: #EAAA00;
+    color: #fff;
+    border-radius: 0;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    border: 0;
+    cursor: pointer;
+    border: 2px solid #EAAA00;
+    max-width: 150px;
+    font-weight: 500;
+    transition: all 0.85s;
+    line-height: 1;
+    border-radius: 10px;
+}
+
+#searchBtn {
+    padding: 10px 0;
+    background: #509E2F;
+    border: 2px solid #509E2F;
+}
+
+#searchBtn:hover {
+    color: #509E2F;
+    background: #fff;
+}
+
+.sortBtn.veg {
+    background: #C4D600;
+    border: 2px solid #C4D600;
+}
+
+.sortBtn.veg:hover {
+    color: #C4D600;
+    background: #fff;
+}
+
+.sortBtn.nonVeg {
+    background: #DC582A;
+    border: 2px solid #DC582A;
+}
+
+.sortBtn.nonVeg:hover {
+    color: #DC582A;
+}
+
+.sortBtn:hover {
+    color: #EAAA00;
+    background: #fff;
+}
+
+input::placeholder {
+    color: #f3f3f3;
+    font-size: 16px;
+}
+
+section#displayContent {
+    display: grid;
+    margin: 60px auto;
+    gap: 45px;
+    grid-template-columns: auto;
+}
+
+ul#recipesList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0;
+    gap: 10px;
+    padding: 0px;
+}
+
+ul#recipesList img {
+    width: 125px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+ul#recipesList li {
+    box-shadow: 0px 0px 4px 0px #0C1A4B3D;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+span.category {
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #a1a1a1;
+    display: block;
+}
+
+span.recipeName {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #252525;
+}
+
+span.rating {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #adadad;
+}
+
+span.star {
+    font-size: 18px;
+    color: #ffa500;
+}
+
+.cardWrapper {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.nameAndRating,
+.cookingTimeAndLikes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.cookingTime {
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 11px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #DC582A;
+}
+
+span.likeHeart {
+    color: #DC582A;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-size: 12px;
+    margin: 20px auto 30px;
+    letter-spacing: 0.5px;
+}
+
+.heart {
+    color: red;
+}
+
+.desk,
+.menuAndProfile {
+    display: none;
+}
+
+label {
+    font-size: 12px;
+}
+
+h5 {
+    margin: 0px auto 10px;
+}
+
+@media only screen and (min-width:768px) {
+    .desk {
+        display: block;
+    }
+
+    h5 {
+        margin: 20px auto;
+    }
+
+    ul#recipesList img {
+        width: 320px;
+        height: 200px;
+    }
+
+    .cardWrapper {
+        padding: 20px 40px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .menuAndProfile {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 60px;
+        position: static;
+        top: auto;
+        left: auto;
+        height: auto;
+        width: auto;
+    }
+
+    .menuList ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        align-items: baseline;
+    }
+    .menuList ul li {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+    .menuList ul li a:hover{
+        opacity: 0.5;
+    }
+    .menuList ul li:first-child {
+        margin-left: 0;
+    }
+
+    .menuList ul li:last-child {
+        margin-right: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    main {
+        padding: 20px;
+    }
+    div#userName {
+        position: static;
+        right: auto;
+        top: auto;
+    }
+    span.recipeName,
+    span.cookingTime {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .sortBtn,
+    #searchBtn {
+        max-width: none;
+        min-width: 185px;
+        font-size: 16px;
+    }
+
+    .searchBar input {
+        grid-column: 1/ span 5;
+    }
+
+    header nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .filters {
+        max-width: 600px;
+        align-items: flex-start;
+        margin: 0 auto 0 0;
+    }
+
+    .searchBar {
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    section#banner {
+        position: relative;
+        margin: 30px 0;
+    }
+
+    ul#recipesList {
+        gap: 25px;
+    }
+
+    span.welcomeText {
+        left: 20%;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    section#displayContent {
+        grid-template-columns: auto auto;
+    }
+
+    span.welcomeText {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width:1600px) {
+    ul#recipesList {
+        grid-template-columns: auto auto auto auto;
+    }
+}

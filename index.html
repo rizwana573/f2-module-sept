@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe World</title>
+    <link rel="icon" href="cookpal-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="userMenu" class="menuList">
+            <div class="hamburgerMenu mobile">
+            </div>
+            <div class="logo">
+                <a class="fdLogo" href="#"><img src="cookpal-logo.png" alt="logo"></a>
+            </div>
+            <article class="menuAndProfile">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#displayContent">Explore</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <div id="userName"><img src="userImage.png" class="profilePic" alt="profile picture">Hi Riz!</div>
+            </article>
+            
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <img class="desk" src="bannerImage.png" alt="banner image">
+            <img class="mobile" src="mobileBanner.png" alt="banner image">
+            <span class="welcomeText">Welcome To<br>My Recipe World!</span>
+        </section>
+        <section class="searchBar">
+            <h4>Search For Recipes</h4>
+            <input id="search" type="search" placeholder="Search">
+            <button id="searchBtn">Search</button>
+        </section>
+        <section class="filters">
+            <button id="all" class="sortBtn">All Recipes  ></button>
+            <button id="vegOnly" class="sortBtn veg">Veg Recipes Only  ></button>
+            <button id="nonVeg" class="sortBtn nonVeg">Non-Veg Recipes  ></button>
+        </section>
+        <section id="displayContent">
+            <article id="ratingFilter">
+                <h4>Filters</h4>
+                <h5>Rating</h5>
+                <input type="checkbox" id="above4" name="above4" value="above4">
+                <label for="above4"> 4 and Above</label><br>
+                <input type="checkbox" id="below4" name="below4" value="below4">
+                <label for="below4"> Below 4</label>
+            </article>
+            <article id="recipesGrid">
+                <ul id="recipesList"></ul>
+            </article>
+        </section>
+        </main>
+        <footer>
+            &copy; copyrights reserved. Made with love <span class=heart>&#10084;</span>
+        </footer>
+</body>
+
+</html>
