@@ -1,4 +1,4 @@
-import data from '/data.json' assert {type: 'json'};
+import data from '/json/data.json' assert {type: 'json'};
 
 //populating recipes from the JSON data into the page.
 let fillData = (data) => {
