@@ -138,10 +138,18 @@ function likeRecipe(){
   for(let i=0;i<like.length;i++){
     like[i].addEventListener("click", function(){
         like[i].classList.toggle("liked");
-      });
-      let liked = document.getElementsByClassName("liked");
-        liked.innerHTML="❤";
+        if(like[i].classList.contains("liked")){
+            like[i].innerHTML="❤"; 
+        }
+        else{
+            like[i].innerHTML="♡";
+        }
+      });  
   }
+//   let liked = document.getElementsByClassName("liked");
+//   for(let i=0;i<liked.length;i++){
+//     liked[i].innerHTML="❤";
+//   }
   
 }
 document.addEventListener("DOMContentLoaded", (event) => {
